@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://gitlab.uniflow-dev.unimed.de/devops/test-flux-upgrade.git
+  url: https://github.com/cedrico2016/flux-test-repo.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
