@@ -1,0 +1,28 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: sealed-secrets
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: https://bitnami-labs.github.io/sealed-secrets
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: gitlab
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://charts.gitlab.io
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: bitnamicharts
+  namespace: flux-system
+spec:
+  type: "oci"
+  interval: 5m0s
+  url: oci://registry-1.docker.io/bitnamicharts
